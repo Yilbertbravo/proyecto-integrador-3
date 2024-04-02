@@ -1,0 +1,60 @@
+@use "../../../styles/scss/variables" as var;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+.header {
+    grid-area: header;
+
+    background-image:
+        linear-gradient(75deg, rgba(0, 0, 0, 0.25), transparent, rgba(0, 0, 0, 0.25)),
+        url("/images/layout/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__group {
+        width: 100%;
+        padding: 0.5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+
+
+        &__title {
+            color: var.$colorFontLessDark;
+            font-size: 4.5rem;
+            font-family: "Caveat", cursive;
+
+            animation: move-title 3s ease-in-out 1;
+
+            -webkit-text-stroke: 0.125rem var.$colorBackgroundDarker;
+
+
+
+        }
+    }
+
+    @keyframes move-title {
+        0% {
+            left: 100%;
+            color: transparent;
+        }
+
+        20% {
+            left: 0%;
+            font-style: normal;
+        }
+
+        50% {
+            transform: rotateY(360deg);
+        }
+
+        100% {
+            left: 0%;
+
+        }
+    }
+
+}

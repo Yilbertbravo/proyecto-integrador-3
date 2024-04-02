@@ -1,0 +1,30 @@
+.logo {
+    img {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 100%;
+        box-shadow: 2px -8px 33px -2px rgba(177, 124, 124, 0.75) inset;
+
+        animation: move-logo 10s infinite;
+        margin-top: 0.5rem;
+
+    }
+
+    @keyframes move-logo {
+        0% {
+            left: 100%;
+            color: transparent;
+        }
+
+
+        100% {
+            transform: rotatez(-360deg);
+
+        }
+    }
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+
+}

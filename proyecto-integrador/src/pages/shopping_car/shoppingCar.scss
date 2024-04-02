@@ -1,0 +1,126 @@
+@use "../../styles/scss/variables" as var;
+
+.shoppingCar {
+    width: 80%;
+
+    h2 {
+        font-size: 2.7rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var.$colorFontLessDark;
+    }
+
+    .shoppingCar__table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+
+        th {
+            font-size: 1.7rem;
+            color: var.$colorBackgroundBlack;
+        }
+
+        td {
+            font-size: 1.2rem;
+        }
+
+        td,
+        th {
+            width: 25%;
+            text-align: center;
+            background-color: var.$backgroundBtn;
+
+        }
+
+        .final {
+            border-top: 1px solid black;
+        }
+
+        td button {
+            margin: 0.5rem;
+
+            svg {
+                height: 1rem;
+            }
+        }
+
+    }
+
+    .form-product-shoppingcart {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+}
+
+@media (max-width: 900px) {
+    .shoppingCar {
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .shoppingCar__table {
+
+            th {
+                font-size: 1.5rem;
+                color: var.$colorBackgroundBlack;
+
+            }
+
+            td {
+                font-size: 1.1rem;
+                border-top: 1px solid black;
+
+            }
+
+            td button {
+                svg {
+                    height: 0.8rem;
+                }
+            }
+
+        }
+
+        .form-product-shoppingcart {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .shoppingCar {
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .shoppingCar__table {
+
+            th {
+                font-size: 1rem;
+                color: var.$colorBackgroundBlack;
+
+            }
+
+            td {
+                font-size: 0.8rem;
+                border-top: 1px solid black;
+
+            }
+
+            td button {
+                svg {
+                    height: 0.5rem;
+                }
+            }
+
+        }
+    }
+}
